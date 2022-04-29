@@ -67,7 +67,7 @@ module findmax(
             if(findmax_s_axis_tvalid) begin
                 if(cur_pos == 1025) begin
                     cur_pos <= cur_pos +1;
-                    cur_val <= 0; //������1025������
+                    cur_val <= 0; 
                 end
                 else begin
                     cur_pos <= cur_pos +1;
