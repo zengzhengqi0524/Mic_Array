@@ -1,0 +1,203 @@
+15:53:59 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\WorkSpace\FPGA_Workspace\Mic_Array\GCC_TDOA_vitis\temp_xsdb_launch_script.tcl
+15:54:00 INFO  : XSCT server has started successfully.
+15:54:00 INFO  : Successfully done setting XSCT server connection channel  
+15:54:00 INFO  : plnx-install-location is set to ''
+15:54:00 INFO  : Successfully done setting workspace for the tool. 
+15:54:00 INFO  : Successfully done query RDI_DATADIR 
+15:54:01 INFO  : Registering command handlers for Vitis TCF services
+15:57:23 INFO  : Successfully done sdx_reload_mss "E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+15:57:23 INFO  : Successfully done sdx_reload_mss "E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+15:57:44 INFO  : Successfully done sdx_reload_mss "E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+15:57:44 INFO  : No changes in MSS file content so sources will not be generated.
+15:57:49 INFO  : Checking for BSP changes to sync application flags for project 'DOA'...
+15:58:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:58:09 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:58:09 INFO  : 'jtag frequency' command is executed.
+15:58:09 INFO  : Context for 'APU' is selected.
+15:58:09 INFO  : System reset is completed.
+15:58:12 INFO  : 'after 3000' command is executed.
+15:58:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+15:58:15 INFO  : FPGA configured successfully with bitstream "E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/bitstream/pl_top.bit"
+15:58:15 INFO  : Context for 'APU' is selected.
+15:58:15 INFO  : Hardware design information is loaded from 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/export/pl_top/hw/pl_top.xsa'.
+15:58:15 INFO  : 'configparams force-mem-access 1' command is executed.
+15:58:15 INFO  : Context for 'APU' is selected.
+15:58:15 INFO  : Sourcing of 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/psinit/ps7_init.tcl' is done.
+15:58:15 INFO  : 'ps7_init' command is executed.
+15:58:15 INFO  : 'ps7_post_config' command is executed.
+15:58:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:16 INFO  : The application 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/Debug/DOA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:58:16 INFO  : 'configparams force-mem-access 0' command is executed.
+15:58:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/bitstream/pl_top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/export/pl_top/hw/pl_top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/Debug/DOA.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:58:16 INFO  : Memory regions updated for context APU
+15:58:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:58:16 INFO  : 'con' command is executed.
+15:58:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:58:16 INFO  : Launch script is exported to file 'E:\WorkSpace\FPGA_Workspace\Mic_Array\GCC_TDOA_vitis\.sdk\launch_scripts\single_application_debug\debugger_doa-default.tcl'
+15:59:03 INFO  : Checking for BSP changes to sync application flags for project 'DOA'...
+15:59:16 INFO  : Disconnected from the channel tcfchan#3.
+15:59:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:59:17 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:59:17 INFO  : 'jtag frequency' command is executed.
+15:59:17 INFO  : Context for 'APU' is selected.
+15:59:17 INFO  : System reset is completed.
+15:59:20 INFO  : 'after 3000' command is executed.
+15:59:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+15:59:24 INFO  : FPGA configured successfully with bitstream "E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/bitstream/pl_top.bit"
+15:59:24 INFO  : Context for 'APU' is selected.
+15:59:24 INFO  : Hardware design information is loaded from 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/export/pl_top/hw/pl_top.xsa'.
+15:59:24 INFO  : 'configparams force-mem-access 1' command is executed.
+15:59:24 INFO  : Context for 'APU' is selected.
+15:59:24 INFO  : Sourcing of 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/psinit/ps7_init.tcl' is done.
+15:59:24 INFO  : 'ps7_init' command is executed.
+15:59:24 INFO  : 'ps7_post_config' command is executed.
+15:59:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:24 INFO  : The application 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/Debug/DOA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:59:24 INFO  : 'configparams force-mem-access 0' command is executed.
+15:59:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/bitstream/pl_top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/export/pl_top/hw/pl_top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/Debug/DOA.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:59:24 INFO  : Memory regions updated for context APU
+15:59:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:24 INFO  : 'con' command is executed.
+15:59:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:59:24 INFO  : Launch script is exported to file 'E:\WorkSpace\FPGA_Workspace\Mic_Array\GCC_TDOA_vitis\.sdk\launch_scripts\single_application_debug\debugger_doa-default.tcl'
+16:00:29 INFO  : Checking for BSP changes to sync application flags for project 'DOA'...
+16:00:41 INFO  : Disconnected from the channel tcfchan#4.
+16:00:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:42 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+16:00:42 INFO  : 'jtag frequency' command is executed.
+16:00:42 INFO  : Context for 'APU' is selected.
+16:00:42 INFO  : System reset is completed.
+16:00:45 INFO  : 'after 3000' command is executed.
+16:00:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+16:00:49 INFO  : FPGA configured successfully with bitstream "E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/bitstream/pl_top.bit"
+16:00:49 INFO  : Context for 'APU' is selected.
+16:00:49 INFO  : Hardware design information is loaded from 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/export/pl_top/hw/pl_top.xsa'.
+16:00:49 INFO  : 'configparams force-mem-access 1' command is executed.
+16:00:49 INFO  : Context for 'APU' is selected.
+16:00:49 INFO  : Sourcing of 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/psinit/ps7_init.tcl' is done.
+16:00:49 INFO  : 'ps7_init' command is executed.
+16:00:49 INFO  : 'ps7_post_config' command is executed.
+16:00:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:49 INFO  : The application 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/Debug/DOA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:00:49 INFO  : 'configparams force-mem-access 0' command is executed.
+16:00:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/bitstream/pl_top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/export/pl_top/hw/pl_top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/Debug/DOA.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:00:49 INFO  : Memory regions updated for context APU
+16:00:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:49 INFO  : 'con' command is executed.
+16:00:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:00:49 INFO  : Launch script is exported to file 'E:\WorkSpace\FPGA_Workspace\Mic_Array\GCC_TDOA_vitis\.sdk\launch_scripts\single_application_debug\debugger_doa-default.tcl'
+16:02:19 INFO  : Checking for BSP changes to sync application flags for project 'DOA'...
+16:02:36 INFO  : Disconnected from the channel tcfchan#5.
+16:02:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:02:37 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+16:02:37 INFO  : 'jtag frequency' command is executed.
+16:02:37 INFO  : Context for 'APU' is selected.
+16:02:37 INFO  : System reset is completed.
+16:02:40 INFO  : 'after 3000' command is executed.
+16:02:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+16:02:43 INFO  : FPGA configured successfully with bitstream "E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/bitstream/pl_top.bit"
+16:02:43 INFO  : Context for 'APU' is selected.
+16:02:43 INFO  : Hardware design information is loaded from 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/export/pl_top/hw/pl_top.xsa'.
+16:02:43 INFO  : 'configparams force-mem-access 1' command is executed.
+16:02:43 INFO  : Context for 'APU' is selected.
+16:02:43 INFO  : Sourcing of 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/psinit/ps7_init.tcl' is done.
+16:02:44 INFO  : 'ps7_init' command is executed.
+16:02:44 INFO  : 'ps7_post_config' command is executed.
+16:02:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:44 INFO  : The application 'E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/Debug/DOA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:02:44 INFO  : 'configparams force-mem-access 0' command is executed.
+16:02:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/bitstream/pl_top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/pl_top/export/pl_top/hw/pl_top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA_vitis/DOA/Debug/DOA.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:02:44 INFO  : Memory regions updated for context APU
+16:02:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:02:44 INFO  : 'con' command is executed.
+16:02:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:02:44 INFO  : Launch script is exported to file 'E:\WorkSpace\FPGA_Workspace\Mic_Array\GCC_TDOA_vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_doa_system_standalone.tcl'
+16:03:40 INFO  : Disconnected from the channel tcfchan#7.

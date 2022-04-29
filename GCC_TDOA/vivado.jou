@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Apr 29 15:54:38 2022
+# Process ID: 11404
+# Current directory: E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7036 E:\WorkSpace\FPGA_Workspace\Mic_Array\GCC_TDOA\GCC_TDOA.xpr
+# Log file: E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA/vivado.log
+# Journal file: E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA/GCC_TDOA.xpr
+update_compile_order -fileset sources_1
+write_hw_platform -fixed -force  -include_bit -file E:/WorkSpace/FPGA_Workspace/Mic_Array/GCC_TDOA/pl_top.xsa
+reset_project

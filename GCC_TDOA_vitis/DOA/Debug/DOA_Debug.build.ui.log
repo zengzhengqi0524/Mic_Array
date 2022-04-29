@@ -1,0 +1,10 @@
+2022-04-29T16:02:19.858655500255-16:02:19 **** Incremental Build of configuration Debug for project DOA ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-make[1]: Nothing to be done for 'main-build'.
+00255-
+16:02:20 Build Finished (took 285ms)
+

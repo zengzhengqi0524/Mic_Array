@@ -1,0 +1,38 @@
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_clk]
+set_property PACKAGE_PIN J20 [get_ports PDM_clk]
+
+#set_property IOSTANDARD LVCMOS33 [get_ports clk]
+#set_property PACKAGE_PIN U18 [get_ports clk]
+
+#set_property IOSTANDARD LVCMOS33 [get_ports rstn]
+#set_property PACKAGE_PIN T17 [get_ports rstn]
+
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_1]
+set_property PACKAGE_PIN H15 [get_ports PDM_in_1]
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_2]
+set_property PACKAGE_PIN G15 [get_ports PDM_in_2]
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_3]
+set_property PACKAGE_PIN K14 [get_ports PDM_in_3]
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_4]
+set_property PACKAGE_PIN J14 [get_ports PDM_in_4]
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_5]
+set_property PACKAGE_PIN F16 [get_ports PDM_in_5]
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_6]
+set_property PACKAGE_PIN F17 [get_ports PDM_in_6]
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_7]
+set_property PACKAGE_PIN F19 [get_ports PDM_in_7]
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_8]
+set_property PACKAGE_PIN F20 [get_ports PDM_in_8]
+
+set_property IOSTANDARD LVCMOS33 [get_ports PDM_in_ref]
+set_property PACKAGE_PIN K17 [get_ports PDM_in_ref]
+
+set_property IOSTANDARD LVCMOS33 [get_ports LED_A[0]]
+set_property PACKAGE_PIN L19 [get_ports LED_A[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports LED_A[1]]
+set_property PACKAGE_PIN L20 [get_ports LED_A[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports LED_A[2]]
+set_property PACKAGE_PIN M19 [get_ports LED_A[2]]
+set_property IOSTANDARD LVCMOS33 [get_ports LED_A[3]]
+set_property PACKAGE_PIN M20 [get_ports LED_A[3]]
+
